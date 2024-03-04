@@ -4,6 +4,7 @@ import java.util.Objects;
 
 public class Autor {
 
+	//javni tekst
 	private String ime;
 	private String prezme;
 	
