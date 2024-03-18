@@ -7,12 +7,29 @@ import java.util.List;
 import biblioteka.interfejs.BibliotekaInterfejs;
 import util.VremenskiServis;
 
+/**
+ * Implementira BibliotekaInterfejs preko liste sa knjigama (ArrayList)
+ * 
+ * @author Teodora
+ *
+ */
 public class Biblioteka implements BibliotekaInterfejs {
 
+	/**
+	 * Lista svih knjiga, sa ArrayList kao implementacijom
+	 */
 	private List<Knjiga> knjige = new ArrayList<Knjiga>();
 	
+	/**
+	 * Vremenski servis koji se poziva za trenutno vreme.
+	 */
 	private VremenskiServis s;
 	
+	/**
+	 * Inicijalizuje biblioteku i postavlja vremenski servis.
+	 * 
+	 * @param s vremenski servis koji ce biblioteka da koristi.
+	 */
 	public Biblioteka(VremenskiServis s) {
 		this.s = s;
 	}
