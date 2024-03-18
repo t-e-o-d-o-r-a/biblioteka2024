@@ -19,7 +19,7 @@ class BibliotekaTest extends BibliotekaInterfejsTest {
 		
 		VremenskiServis s = EasyMock.mock(VremenskiServis.class); //mock je staticka metoda, treba da se dobije nazad lazni objekat klase
 		
-		EasyMock.expect(s.vratiVreme("Beograd")).andReturn(LocalDateTime.now());  //pisemo sta ocekujemo da ova metoda vrati kada se pozove
+		EasyMock.expect(s.vratiVreme("Beograd")).andReturn(LocalDateTime.now()).anyTimes();  //pisemo sta ocekujemo da ova metoda vrati kada se pozove
 		EasyMock.expect(s.vratiVreme(null)).andReturn(null);
 		
 		EasyMock.replay(s);  //objekat je pripremljen
